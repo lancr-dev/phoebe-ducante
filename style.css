@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Seasons';
+  src: url(fonts/The\ Seasons\ Regular.ttf);
+}
+
+:root {
+  --color-primary: #ff00f5;
+  --color-secondary: #faff00;
+  --color-text: #f8f8f8;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Seasons', sans-serif;
+  font-size: 16px;
+  background: url('images/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  transition:
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease,
+    -webkit-backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links {
+  width: 100%;
+  padding: 2rem 4.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.nav-links a:first-child {
+  justify-self: start;
+}
+
+.nav-logo {
+  justify-self: center;
+}
+
+.nav-links a:nth-child(3) {
+  justify-self: end;
+}
+
+.side-bar-btn {
+  display: none;
+}
+
+.side-bar {
+  display: none;
+}
+
+.hero {
+  height: 2000px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    padding: 2rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Hide About & Experience */
+  .nav-links a:first-child {
+    display: none;
+  }
+
+  /* Hide Contacts */
+  .nav-links a:nth-child(3) {
+    display: none;
+  }
+
+  .nav-logo {
+    display: block;
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+  }
+
+  .side-bar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .side-bar-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .side-bar {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #d63bd3 0%, #f57f96 45%, #ffd75a 100%);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+
+    transition:
+      transform 0.5s ease,
+      opacity 0.4s ease,
+      visibility 0.5s;
+  }
+
+  .side-bar.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .close-side-bar {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .close-side-bar img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+
+  .side-bar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .side-bar-links a {
+    color: #ffffff;
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
+    text-decoration: none;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  .side-bar.active .side-bar-links a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .side-bar.active .side-bar-links a:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+
+  .side-bar.active .side-bar-links a:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+
+  .side-bar.active .side-bar-links a:nth-child(3) {
+    transition-delay: 0.35s;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    padding: 1.5rem;
+  }
+
+  .close-side-bar {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
