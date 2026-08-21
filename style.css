@@ -97,8 +97,144 @@ nav.scrolled {
   display: none;
 }
 
-.hero {
-  height: 2000px;
+.home {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: clamp(6rem, 10vw, 10rem) clamp(1.5rem, 5vw, 5.5rem)
+    clamp(2rem, 5vw, 4rem);
+
+  background: linear-gradient(
+    135deg,
+    #dd3bd8 0%,
+    #e567ad 25%,
+    #f5838e 48%,
+    #ffae73 72%,
+    #ffe15a 100%
+  );
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.home__title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #ffffff;
+
+  font-family: 'Seasons', serif;
+  font-size: clamp(3.2rem, 10vw, 9rem);
+  font-weight: 400;
+  line-height: 0.82;
+
+  text-shadow: 0.18rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.home__line {
+  display: block;
+}
+
+/* I design */
+.home__line--design {
+  transform: translateX(-43%);
+}
+
+/* I craft */
+.home__line--craft {
+  position: relative;
+
+  transform: translateX(50%);
+}
+
+/* creative */
+.home__creative {
+  position: absolute;
+
+  top: -1.2em;
+  right: -1.5em;
+
+  color: #e328cc;
+
+  font-size: 0.42em;
+  font-weight: 400;
+
+  line-height: 1;
+  white-space: nowrap;
+
+  text-shadow: none;
+}
+
+.home__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: clamp(10rem, 20vw, 17.25rem);
+
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  padding: clamp(0.8rem, 1.5vw, 1.1rem) 2rem;
+
+  border-radius: 999px;
+
+  background: linear-gradient(90deg, #d838dc, #df36d5);
+
+  color: #ffffff;
+
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.7rem, 1.4vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.home__button:hover {
+  transform: translateY(-0.25rem);
+
+  box-shadow: 0 0.75rem 1.5rem rgba(216, 56, 220, 0.2);
+}
+
+.home__button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 0.3rem;
+}
+
+.home__details {
+  position: absolute;
+
+  bottom: clamp(1.5rem, 5vw, 4rem);
+  left: clamp(1.5rem, 5vw, 5.5rem);
+
+  color: #ffffff;
+
+  font-family: 'Seasons', sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  line-height: 1.35;
+}
+
+.home__details p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
