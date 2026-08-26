@@ -73,7 +73,7 @@ nav.scrolled {
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: underline;
 }
 
@@ -95,6 +95,16 @@ nav.scrolled {
 
 .side-bar {
   display: none;
+}
+
+.side-bar-links a {
+  color: var(--color-text);
+  transition: 0.3s ease;
+}
+
+.side-bar-links a:hover {
+  text-decoration: underline;
+  color: var(--color-secondary);
 }
 
 .home {
@@ -211,6 +221,7 @@ nav.scrolled {
 
 .home__button:hover {
   transform: translateY(-0.25rem);
+  color: var(--color-secondary);
 
   box-shadow: 0 0.75rem 1.5rem rgba(216, 56, 220, 0.2);
 }
@@ -292,7 +303,7 @@ nav.scrolled {
 }
 
 .about__intro span {
-  color: #ffe33f;
+  color: var(--color-secondary);
 }
 
 .about__description {
@@ -649,7 +660,7 @@ nav.scrolled {
 }
 
 .contact__email:hover {
-  opacity: 0.75;
+  color: var(--color-secondary);
 }
 
 .contact__email:focus-visible {
@@ -724,7 +735,7 @@ nav.scrolled {
 }
 
 .footer__socials a:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: underline;
 }
 
