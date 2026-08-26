@@ -89,6 +89,17 @@ nav.scrolled {
   justify-self: end;
 }
 
+.nav-links .nav-link {
+  transition:
+    color 0.3s ease,
+    transform 0.5s ease;
+}
+
+.nav-links .nav-link.active {
+  color: var(--color-secondary);
+  transform: scale(1.3);
+}
+
 .side-bar-btn {
   display: none;
 }
@@ -1005,6 +1016,17 @@ nav.scrolled {
 @media (max-width: 480px) {
   .nav-links {
     padding: 1.5rem;
+  }
+
+  .nav-links .nav-link {
+    transition:
+      color 0.3s ease,
+      transform 0.5s ease;
+  }
+
+  .nav-links .nav-link.active {
+    color: var(--color-secondary);
+    transform: scale(1.1);
   }
 
   .close-side-bar {
