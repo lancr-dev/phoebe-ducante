@@ -19,15 +19,28 @@ section {
   scroll-margin-top: 80px;
 }
 
+html,
 body {
-  min-height: 100vh;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
   font-family: 'Seasons', sans-serif;
   font-size: 16px;
-  background: url('images/background.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url('images/background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 nav {
@@ -47,7 +60,7 @@ nav {
 }
 
 nav.scrolled {
-  background-color: rgba(255, 0, 247, 0.356);
+  background-color: rgba(255, 42, 255, 0.356);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -68,6 +81,7 @@ nav.scrolled {
   color: #ffffff;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   text-decoration: none;
+  text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
 
   transition: 0.3s ease;
 }
@@ -132,15 +146,6 @@ nav.scrolled {
 
   padding: clamp(6rem, 10vw, 10rem) clamp(1.5rem, 5vw, 5.5rem)
     clamp(2rem, 5vw, 4rem);
-
-  background: linear-gradient(
-    135deg,
-    #dd3bd8 0%,
-    #e567ad 25%,
-    #f5838e 48%,
-    #ffae73 72%,
-    #ffe15a 100%
-  );
 }
 
 .home__content {
@@ -253,6 +258,7 @@ nav.scrolled {
   font-family: 'Seasons', sans-serif;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   line-height: 1.35;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .home__details p {
@@ -269,15 +275,6 @@ nav.scrolled {
   align-items: center;
 
   padding: clamp(6rem, 10vw, 9rem) clamp(1.5rem, 5vw, 5.5rem);
-
-  background: linear-gradient(
-    135deg,
-    #d83dd4 0%,
-    #e567ad 25%,
-    #f5838e 48%,
-    #ffae73 72%,
-    #ffe15a 100%
-  );
 }
 
 .about__container {
@@ -315,6 +312,7 @@ nav.scrolled {
 
 .about__intro span {
   color: var(--color-secondary);
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .about__description {
@@ -325,6 +323,7 @@ nav.scrolled {
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-weight: 400;
   line-height: 1.5;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .about__details {
@@ -337,6 +336,7 @@ nav.scrolled {
 
 .about__details p {
   margin: 0;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .about__visual {
@@ -419,15 +419,6 @@ nav.scrolled {
   min-height: 100svh;
 
   padding: clamp(7rem, 10vw, 9rem) clamp(1.5rem, 7vw, 6.5rem);
-
-  background: linear-gradient(
-    135deg,
-    #d83dd4 0%,
-    #e567ad 25%,
-    #f5838e 48%,
-    #ffae73 72%,
-    #ffe15a 100%
-  );
 }
 
 .experience__container {
@@ -494,6 +485,7 @@ nav.scrolled {
 
 .experience__item-content {
   min-width: 0;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .experience__item h3 {
@@ -583,6 +575,7 @@ nav.scrolled {
   font-size: clamp(1rem, 1.7vw, 1.5rem);
   font-weight: 400;
   line-height: 1.5;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .experience__intro span {
@@ -601,15 +594,6 @@ nav.scrolled {
   align-items: center;
 
   padding: clamp(7rem, 10vw, 9rem) clamp(1.5rem, 7vw, 6.5rem);
-
-  background: linear-gradient(
-    135deg,
-    #d83dd4 0%,
-    #e567ad 25%,
-    #f5838e 48%,
-    #ffae73 72%,
-    #ffe15a 100%
-  );
 }
 
 .contact__container {
@@ -666,6 +650,7 @@ nav.scrolled {
   letter-spacing: 0.08em;
   text-decoration: underline;
   text-underline-offset: 0.25rem;
+  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 
   transition: opacity 0.3s ease;
 }
@@ -692,6 +677,7 @@ nav.scrolled {
   font-size: clamp(1.1rem, 1.8vw, 1.6rem);
   font-weight: 400;
   line-height: 1.5;
+  text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .contact__intro span {
@@ -704,15 +690,6 @@ nav.scrolled {
 
 .footer {
   padding: 0 clamp(1.5rem, 4vw, 3.5rem) clamp(2rem, 4vw, 3.5rem);
-
-  background: linear-gradient(
-    135deg,
-    #d83dd4 0%,
-    #e567ad 25%,
-    #f5838e 48%,
-    #ffae73 72%,
-    #ffe15a 100%
-  );
 }
 
 .footer__container {
@@ -741,6 +718,7 @@ nav.scrolled {
   letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
 
   transition: 0.3s ease;
 }
@@ -763,6 +741,7 @@ nav.scrolled {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.65rem, 0.9vw, 0.8rem);
   letter-spacing: 0.05em;
+  text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .animate-item {
