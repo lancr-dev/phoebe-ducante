@@ -856,7 +856,10 @@ nav.scrolled {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(135deg, #d63bd3 0%, #f57f96 45%, #ffd75a 100%);
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     opacity: 0;
     visibility: hidden;
