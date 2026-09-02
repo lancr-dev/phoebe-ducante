@@ -10,9 +10,9 @@
 }
 
 :root {
-  --color-primary: #ff00f5;
-  --color-secondary: #faff00;
-  --color-text: #f8f8f8;
+  --color-primary: #dc4b82;
+  --color-secondary: #e7e7e7;
+  --color-text: #000000;
 }
 
 section {
@@ -60,7 +60,7 @@ nav {
 }
 
 nav.scrolled {
-  background-color: rgba(255, 42, 255, 0.356);
+  background-color: rgba(255, 255, 255, 0.356);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -78,16 +78,16 @@ nav.scrolled {
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: var(--color-text);
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   text-decoration: none;
-  text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
+  font-weight: 600;
 
   transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
@@ -110,7 +110,7 @@ nav.scrolled {
 }
 
 .nav-links .nav-link.active {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   transform: scale(1.3);
 }
 
@@ -129,7 +129,7 @@ nav.scrolled {
 
 .side-bar-links a:hover {
   text-decoration: underline;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .home {
@@ -163,7 +163,7 @@ nav.scrolled {
   flex-direction: column;
   align-items: center;
 
-  color: #ffffff;
+  color: var(--color-primary);
 
   font-family: 'Seasons', serif;
   font-size: clamp(3.2rem, 10vw, 9rem);
@@ -196,7 +196,7 @@ nav.scrolled {
   top: -1.2em;
   right: -1.5em;
 
-  color: #e328cc;
+  color: var(--color-text);
 
   font-size: 0.42em;
   font-weight: 400;
@@ -219,25 +219,27 @@ nav.scrolled {
 
   border-radius: 999px;
 
-  background: linear-gradient(90deg, #d838dc, #df36d5);
+  background-color: #000000;
 
-  color: #ffffff;
+  color: var(--color-secondary);
 
   font-family: 'Playfair Display', serif;
   font-size: clamp(0.7rem, 1.4vw, 1.2rem);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-decoration: none;
 
   transition:
     transform 0.3s ease,
+    background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .home__button:hover {
   transform: translateY(-0.25rem);
-  color: var(--color-secondary);
+  background-color: #df86a6;
+  color: black;
 
   box-shadow: 0 0.75rem 1.5rem rgba(216, 56, 220, 0.2);
 }
@@ -253,12 +255,12 @@ nav.scrolled {
   bottom: clamp(1.5rem, 5vw, 4rem);
   left: clamp(1.5rem, 5vw, 5.5rem);
 
-  color: #ffffff;
+  color: #000000;
 
   font-family: 'Seasons', sans-serif;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
+  font-weight: 600;
   line-height: 1.35;
-  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .home__details p {
@@ -288,7 +290,7 @@ nav.scrolled {
 }
 
 .about__content {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .about__title {
@@ -297,7 +299,6 @@ nav.scrolled {
   font-family: 'Seasons', serif;
   font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 400;
-  text-shadow: 0.18rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   line-height: 1;
 }
 
@@ -308,11 +309,12 @@ nav.scrolled {
   font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-weight: 400;
   line-height: 1.3;
+  color: var(--color-text);
 }
 
 .about__intro span {
-  color: var(--color-secondary);
-  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .about__description {
@@ -336,7 +338,7 @@ nav.scrolled {
 
 .about__details p {
   margin: 0;
-  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
+  font-weight: 600;
 }
 
 .about__visual {
@@ -383,7 +385,7 @@ nav.scrolled {
 
   gap: 0.4rem;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.7rem, 0.9vw, 0.9rem);
@@ -440,12 +442,12 @@ nav.scrolled {
 .experience__heading {
   margin: 0 0 clamp(1.5rem, 3vw, 2rem);
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Seasons', serif;
   font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 400;
-  text-shadow: 0.18rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+  text-shadow: 0.15rem 0.2rem 0 rgba(0, 0, 0, 0.15);
   line-height: 1;
 }
 
@@ -491,7 +493,7 @@ nav.scrolled {
 .experience__item h3 {
   margin: 0;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Seasons', serif;
   font-size: clamp(1.1rem, 1.8vw, 1.55rem);
@@ -503,7 +505,7 @@ nav.scrolled {
 .experience__tool-description {
   margin: 0.25rem 0 0;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.7rem, 1vw, 0.9rem);
@@ -530,7 +532,7 @@ nav.scrolled {
 
   border-radius: 999px;
 
-  background: linear-gradient(90deg, #d93bdf, #e846c8);
+  background-color: var(--color-primary);
 
   color: #ffffff;
 
@@ -550,7 +552,7 @@ nav.scrolled {
 
   border-radius: 50%;
 
-  background-color: #78b500;
+  background-color: var(--color-text);
 }
 
 .experience__item-content > .experience__tag {
@@ -559,11 +561,10 @@ nav.scrolled {
 
 .experience__intro {
   max-width: 31rem;
-
   margin-top: clamp(8rem, 12vw, 8rem);
   margin-left: auto;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   text-align: right;
 }
@@ -576,14 +577,6 @@ nav.scrolled {
   font-weight: 400;
   line-height: 1.5;
   text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
-}
-
-.experience__intro span {
-  color: #e328cc;
-}
-
-.experience__intro p + p {
-  margin-top: 0.15rem;
 }
 
 .contact {
@@ -621,7 +614,7 @@ nav.scrolled {
   flex-direction: column;
   align-items: center;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Seasons', serif;
   font-size: clamp(4rem, 8vw, 7.5rem);
@@ -632,18 +625,18 @@ nav.scrolled {
 }
 
 .contact__title > span:first-child {
-  color: #e900c7;
+  color: var(--color-primary);
 }
 
 .contact__title em {
-  color: #ffe31f;
+  color: var(--color-text);
   font-style: normal;
 }
 
 .contact__email {
   margin-top: clamp(1.5rem, 3vw, 2.5rem);
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.8rem, 1.2vw, 1rem);
@@ -656,7 +649,7 @@ nav.scrolled {
 }
 
 .contact__email:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .contact__email:focus-visible {
@@ -667,7 +660,7 @@ nav.scrolled {
 .contact__intro {
   max-width: 31rem;
 
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .contact__intro p {
@@ -678,14 +671,6 @@ nav.scrolled {
   font-weight: 400;
   line-height: 1.5;
   text-shadow: 0.11rem 0 0 rgba(0, 0, 0, 0.15);
-}
-
-.contact__intro span {
-  color: #e900c7;
-}
-
-.contact__intro p + p {
-  margin-top: 0.2rem;
 }
 
 .footer {
@@ -710,7 +695,7 @@ nav.scrolled {
 }
 
 .footer__socials a {
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Seasons', sans-serif;
   font-size: clamp(0.65rem, 0.9vw, 0.8rem);
@@ -724,7 +709,7 @@ nav.scrolled {
 }
 
 .footer__socials a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
@@ -736,7 +721,7 @@ nav.scrolled {
 .footer__copyright {
   margin: 0;
 
-  color: #ffffff;
+  color: var(--color-text);
 
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.65rem, 0.9vw, 0.8rem);
@@ -920,7 +905,7 @@ nav.scrolled {
   }
 
   .side-bar-links a {
-    color: #ffffff;
+    color: var(--color-text);
     font-size: clamp(1.5rem, 7vw, 2.25rem);
     text-decoration: none;
 
@@ -1032,7 +1017,7 @@ nav.scrolled {
   }
 
   .nav-links .nav-link.active {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     transform: scale(1.1);
   }
 
