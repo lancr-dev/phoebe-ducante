@@ -323,9 +323,8 @@ nav.scrolled {
 
   font-family: 'Seasons', serif;
   font-size: clamp(1rem, 1.8vw, 1.2rem);
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.5;
-  text-shadow: 0.11rem 0.11rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .about__details {
